@@ -1,0 +1,65 @@
+import { Menu } from 'antd';
+
+
+
+const leftMenuItems = [
+  {
+    label: 'Internet Food Data Base',
+    key: 'homepage',
+  },
+];
+
+const centerMenuItems = [
+  {
+    label: (
+      <a href="http://localhost:3000/profile" >
+        Profile
+      </a>
+    ),
+    key: 'your profile',
+  },
+  {
+    label: (
+      <a href="http://localhost:3000/recommended" >
+        Recommended
+      </a>
+    ),
+    key: 'recommended for you',
+  },
+  {
+    label: (
+      <a href="http://localhost:3000/recipes" >
+        My Recipe Book
+      </a>
+    ),
+    key: 'my recipe book',
+  },
+  {
+    label: (
+      <a href="http://localhost:3000/search" >
+        Search
+      </a>
+    ),
+    key: 'search recipes',
+  },
+];
+
+const rightMenuItems = [
+  {
+    label: (
+      <a href="http://localhost:3000/logout" >
+        logout
+      </a>
+    ),
+    key: 'logout',
+  },
+];
+
+
+<div style={{ display: 'flex', justifyContent: 'right' }}>
+        <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={rightMenuItems} style={{ width: '100px' }} />
+      </div>
+
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={centerMenuItems} style={{ width: '460px' }} />
+      </div>
